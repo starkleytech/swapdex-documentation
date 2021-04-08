@@ -122,7 +122,6 @@ The factory is an essential component of the Galital ecosystem, it allows, among
 It will also be possible, during the creation of an NFT, to choose a % of royalties that will be paid to the creator for each transaction of the said NFT in the Galital market. This system will provide creators with an additional income incentive to share their creations.
 
 
-_Screen / design of the UX of the factory ? _
 
 ### 5. The Hub (Bridges between chains + IU)
 
@@ -144,14 +143,12 @@ The market fee can be reduced when paying in $TAL as well as in possession of sp
 Users also have the possibility to make a private sale (NFT can only be purchased through the address specified by the seller). In this case, only the fees for the creator are deducted. 
 
 
-_Screen / design of the UX of the market with some features ? _
 
 ### 7. The Vault 
 
 The vault is the ideal place to stack NFTs to farmer new tokens. Whether you want to earn in-game coins or other crypto tokens, the vault allows you to lock your NFTs for a period of time to make them work for you. 
 
 
-_Screen / design of the UX of the Vault? _
 
 ### 8. Fractional NFT System
 
