@@ -1,10 +1,3 @@
-# What is Galital ?
-
-
-
-
-
-
 
 # Galital: The Digital Galaxy
 
@@ -17,29 +10,29 @@
 
 
 
-### 1. Introduction
+## 1. Introduction
 
 The digital divide began several years ago and the world is gradually becoming digitalized. The majority of payments are now made online and more and more digital products are being purchased. However, ownership of these goods rarely belongs to the buyers. The digital games that you have on your Steam account, PS store or others platforms do not really belong to you. The advent of NFTs (Non Fungible Tokens) has revolutionized digital goods and allows for true ownership within the blockchain. The NFTs belong to you and you are free to dispose of them as you want. However, the sale, purchase or exchange of NFTs is unfortunately not available to everyone yet. Between the difficulty of using the various marketplace and the increasing cost of gas fees, NFTs have become reserved for the medium and large wallet. With the arrival of utility NFTs (in video games for example) it has become crucial to transform the way we exchange NFTs to make them easily accessible to everyone, both in terms of usage and associated costs. 
 
 
 >	Galital was born out of this observation. An ecosystem to democratize the use of NFTs by creating an NFT platform based on Polkadot and the framework substrate. The development of Galital is based on several essential components: 
 
-##   **The Factory: **
+###   **The Factory **
 
 Making the creation and deployment of NFTs simple, fast and accessible to artists, content creators, video game creators or anyone else.
-##   **The Hub: **
+###   **The Hub **
 
 Allow the interconnection of NFTs between different chains, whether it is to The Binance Chain, Ethereum, Avax, Polkadot or Flare, the goal of the Hub is to make the cross-chain transition simple and accessible.
-##   **The Market: **
+###  **The Market **
 
 Real main component of the ecosystem, the market allows the sale, purchase or exchange of NFTs, whether by auction or simple listing. Users also have the possibility to exchange NFTs directly. Finally, thanks to DeFi, the market allows NFTs to be borrowed and lent.
-##   **The Forge : **
+###   **The Forge  **
 
 The domain of Sharding. This is the place where the magic happens and allows the user to break their NFT into multiple sharded parts. This is also where you can reform an NFT with all its sharded parts.
-##   **The Vault: **
+###   **The Vault **
 
 allows you to place your NFTs as collateral in order to retrieve tokens. 
-##   **The Home **: 
+###   **The Home ** 
 
 A dashboard to manage your NFTs.
 
@@ -47,7 +40,7 @@ A dashboard to manage your NFTs.
 
 
 
-### 2. Governance and Treasury
+## 2. Governance and Treasury
 
 Galital is based on the substrate framework, so it benefits from a true decentralized governance system built directly within the blockchain itself. Among other things, it allows any $TAL holder to have a voice in the evolution of the ecosystem. Through governance, it is possible to submit proposals to help Galital evolve, submit bounty to direct the development of different products or even to offer tips to reward the work done by the community.
 
@@ -56,7 +49,7 @@ Galital is based on the substrate framework, so it benefits from a true decentra
 
 
 
-![drawing](/assets/governance-treasury.png)
+![drawing](assets/governance-treasury.png)
 
 Governance is divided into 3 distinct groups: 
 
@@ -64,7 +57,7 @@ Governance is divided into 3 distinct groups:
 
 
 
-![drawing](/assets/parlemient.png)
+![drawing](assets/parlemient.png)
 
 
 
@@ -76,7 +69,7 @@ It is thanks to this governance system that Galital users can have a strong impa
 
 
 
-3. Placement and security of the chain (Staking)
+## 3. Placement and security of the chain (Staking)
 
 Any holder of $TAL can participate in the staking to secure the blockchain. In return for this contribution, staker will receive $TAL rewards. There are 2 distinct roles: Validator and Nominator .
 
@@ -114,7 +107,7 @@ The nominators are responsible for designating their participation to the valida
 
 While validators are active participants in the network who take part in the production and finality mechanisms of the blocks, nominators play a more passive role with a delegation approach. Therefore, there is no need for technical knowledge or specific equipment. However, a good nominator is wise with regard to the validators he or she chooses, paying attention to his or her own reward percentage and the risk of being sanctioned if the validator acts in a belligerent manner. Nominators are rewarded according to the number of shares they hold in the Validator (less commission fees). 
 
-### 4. The Factory
+## 4. The Factory
 
 The factory is an essential component of the Galital ecosystem, it allows, among other things, to create and deploy its own NFTs in a simple and fast way. Thanks to an ergonomic interface design, creating NFTs becomes child's play and within everyone's reach. Whether you're an artist, content creator, Video game developer or passionate about NFTs, the factory is made to simplify your life and save you precious time, allowing you to create endless NFTs in a snap of your fingers.
 
@@ -123,11 +116,11 @@ It will also be possible, during the creation of an NFT, to choose a % of royalt
 
 
 
-### 5. The Hub (Bridges between chains + IU)
+## 5. The Hub (Bridges between chains + IU)
 
 The Hub is the dedicated space for cross-chain bridges. This is where users will be able to transfer their NFTs between the different channels supported by Galital (the list will evolve according to the choices of the community). Initially, transfers to and from Ethereum, BSC, Avalanche, Polkadot, Matic and Flare will be available. This will allow the user to freely transfer their NFTs for direct use in the Galital ecosystem, including the market. The transfer and flow is simple, the user will have a graphical user interface where they can select the origin and destination chain for the transfer of NFTs or tokens, the user then signs the transaction through the network of oracles (Galital will use ChainSafe technology), and transfers the assets to the desired chain.
 
-### 6. The Market
+## 6. The Market
 
 The market is Galital's central point, this is where users will be able to buy or sell NFTs. The strength of the market is its simplicity of use and diversity, it will be possible for the seller to choose the crypto he wants to receive as payment and the buyer will be able to pay in the crypto of his choice, thanks to an integrated DEX system, the purchases will be fluid, no more time to convert your ETHs into DAI because the NFT of your choice was only listed in DAI. No more exorbitant gas fees, your purchase is now done in one click and you can then buy your NFTs whenever you want, quickly and easily. 
 
@@ -144,13 +137,13 @@ Users also have the possibility to make a private sale (NFT can only be purchase
 
 
 
-### 7. The Vault 
+## 7. The Vault 
 
 The vault is the ideal place to stack NFTs to farmer new tokens. Whether you want to earn in-game coins or other crypto tokens, the vault allows you to lock your NFTs for a period of time to make them work for you. 
 
 
 
-### 8. Fractional NFT System
+## 8. Fractional NFT System
 
 > Galital intends to implement fractional NFT in order to push the NFT beyond the limit and unlock a bunch of new possibilities.
 
@@ -180,22 +173,22 @@ Sharding will also unlock a better and healthier price discovery for NTFs. Share
 
 
 
-### 9. The forge
+## 9. The forge
 
 The forge is the place where users can break their NFT’s into shards. They decide the scarcity (10 shards, 100, 1000 eg...) Then, they can distribute or sell it on the market place like a token. This will unlock the possibility of video game creators to improve the scarcity of their NFT and allow a greater number of people to get into it.
 
 
 When you have collected all the shards from an NFT, you can go on the forge and fuse them in order to retrieve the original NFT.
 
-### 10. Lending / Borrow
+## 10. Lending / Borrow
 
 In addition to greatly simplifying the buying and selling of NFTs, the market also allows users to rent or lend their NFTs. Want to get a valuable item in a game for a certain period of time? Do you own lands that you would like to make available? A friend needs an NFT in your possession temporarily? The market will allow you to perform all these actions and much more in a simple and secure way. No more need to send your NFT in order to lend it. A new field of possibilities opens up for you with the Galital market. 
 
-### 11. The Home
+## 11. The Home
 
 The home acts as a dashboard to manage your NFTs. This is where you will be able to view your NFTs, managing your assets is your main control panel. From here you will be able to manage all applications, create tokens, buy/sell on the marketplace.
 
-### 12. INK! Contracts
+## 12. INK! Contracts
 
 Since Substrate supports Wasm smart contracts, this means that any language that can compile to Wasm can be used to write these contracts. ink! is Parity's answer to writing smart contracts using the Rust programming language.
 
@@ -203,7 +196,7 @@ Since Substrate supports Wasm smart contracts, this means that any language that
 ink! is an integrated domain specific language (eDSL) based on Rust for writing intelligent Wasm contracts specifically for "Pallet Contracts". The main objectives of INK! are user-friendliness, conciseness and efficiency.
 
 
-#### 12.1 Contract Components
+### 12.1 Contract Components
 
 
 ink! should feel familiar to developers who have programmed using other modern intelligent contract languages. The skeleton of a contract with all the same components you would expect:
@@ -220,7 +213,7 @@ In ink! mutability and visibility are explicitly defined by contract function. I
 In addition, you have access to commonly used environment variables such as caller ID and more!
 
 
-#### 12.2 Design
+### 12.2 Design
 
 
 The main objectives of ink! are accuracy, conciseness and efficiency.
@@ -232,7 +225,7 @@ inking! is designed to be as close as possible to the Rust programming language.
 Because ink! follows Rust standards, tools like rustfmt and rust-analyzer already work natively.
 
 
-#### 12.3 Overflow security
+### 12.3 Overflow security
 
 
 Being written in Rust, INK! can provide over/underrun security at compile time. Using a Rust compiler configuration, you can specify whether you want to support mathematical overflows or whether you want contract execution to panic in the event of an overflow. There is no need to continually import "Safe Math" libraries, although Rust also offers built-in verified, encapsulated, and saturated mathematical functions.
@@ -241,13 +234,13 @@ Being written in Rust, INK! can provide over/underrun security at compile time. 
 Note: There are known issues with the functionality of the compiler overflow checks and the resulting size of the blob Wasm object. This feature may change or be repeated in the future.
 
 
-#### 12.4 Test environment 
+### 12.4 Test environment 
 
 
 INK! provides an integrated test environment that can be used to perform out-of-chain unit testing with the Rust framework. This makes it simple and easy to ensure that your contract code works as expected, without the need for third-party test platforms.
 
 
-## 12.4 ink! vs Solidity 
+### 12.4 ink! vs Solidity 
 
 
 Rust is an ideal intelligent contract language. It is secure, memory-safe, and free of undefined behaviors. It generates small binary files because it doesn't include extra bloat, such as a garbage collector, and advanced optimizations and removes dead code. Using compiler flags, Rust can automatically protect itself against integer overflow.
@@ -372,7 +365,7 @@ Here is a brief comparison of the features between INK! and Solidity:
 
 
 
-References:
+## References
 
 
 * [https://substrate.dev/docs/en/knowledgebase/smart-contracts/](https://substrate.dev/docs/en/knowledgebase/smart-contracts/)

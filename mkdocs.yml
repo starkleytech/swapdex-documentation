@@ -1,7 +1,14 @@
 site_name: Galital documentation
 copyright: Copyright &copy; 2021 Galital
+markdown_extensions:
+  - toc:
+      toc_depth: 3
 theme:
+  markdown_extensions:
+  features:
+    - toc.integrate
   name: material
+  features:
   custom_dir: overrides
   logo: assets/galital-logo.png
   favicon: assets/galital-logo.png
