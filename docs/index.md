@@ -1,6 +1,7 @@
 
-# Galital: The Digital Galaxy
+> **⚠ WARNING:  Work in progress content can change and it's not definitive.** 
 
+# Galital: The Digital Galaxy
 
 ## Disclaimer:
 
