@@ -76,25 +76,25 @@ Any holder of $TAL can participate in the staking to secure the blockchain. In r
 
 
  
-###   3.1	Collator
+###   3.1	Validator
 
 
-Collator secure the chain by locking $TAL and processing blocks and transactions, they are backed by a stake from the validator owner and the nominater that stake on top of the collator.
+Validator secure the chain by locking $TAL and processing blocks and transactions, they are backed by a stake from the validator owner and the nominater that stake on top of the validator.
 
 
 These will play a crucial role in the addition of new blocks to the relay chain and, by extension, to all secondary chains. This will allow the parties to carry out inter-chain transactions via the relay chain. 
 
-Collator have 2 functions: 
+Validator have 2 functions: 
 
 
 
 *   They verify the information contained in an assigned set of blocks from substrings to determine their validity (such as the identity of the parties to the transaction and the subject matter of the contract).
-*   They participate in consensus mechanisms to produce the building blocks of the chain based on the validity statements of the other collator. 
+*   They participate in consensus mechanisms to produce the building blocks of the chain based on the validity statements of the other validator. 
 
-In the case of non-compliance with the consensus algorithms, the collator is slashed by removing some or all of the $TAL locked on it. This mechanism thus helps to discourage bellicose actors. Conversely, respect and good performance are rewarded by the blockchain.
+In the case of non-compliance with the consensus algorithms, the validator is slashed by removing some or all of the $TAL locked on it. This mechanism thus helps to discourage bellicose actors. Conversely, respect and good performance are rewarded by the blockchain.
 
 
-There are currently  500 places available for collator. In order to be elected by the network and thus create new blocks, collator must be in the first 500 in terms of $TAL blocked (validator + nominations). If a validator is not elected by the network, they will not do any work and will not receive any reward. 
+There are currently  500 places available for validator. In order to be elected by the network and thus create new blocks, validator must be in the first 500 in terms of $TAL blocked (validator + nominations). If a validator is not elected by the network, they will not do any work and will not receive any reward. 
 
 
 In return for their contribution, validators receive the block rewards (new $TAL created, based on the inflation system provided by the network) as well as 20% of the transaction fee (the rest going to the treasury). These rewards are divided between the validator and its nominators according to their respective shares (minus the commission set by the validator to cover maintenance costs). 
