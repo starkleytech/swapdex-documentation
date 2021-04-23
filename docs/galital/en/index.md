@@ -50,7 +50,7 @@ Galital is based on the substrate framework, so it benefits from a true decentra
 
 
 
-![drawing](assets/governance-treasury.png)
+![drawing](../../assets/governance-treasury.png)
 
 Governance is divided into 3 distinct groups: 
 
@@ -58,7 +58,7 @@ Governance is divided into 3 distinct groups:
 
 
 
-![drawing](assets/parlemient.png)
+![drawing](../../assets/parlemient.png)
 
 
 

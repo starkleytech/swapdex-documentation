@@ -3,7 +3,7 @@
 
 # Galital: La galaxie digital
 
-## clause de non-responsabilité:
+## Clause de non-responsabilité:
 
 **Les technologies de la blockchain et du jeu vidéo sont en constante évolution. Ce papier blanc décrit le dévelopement le mieux possible, toutefois du à la nature de la technologie et la complexitée de l’intégration du monde de la 
 blockchain et du jeux vidéo le présent document peut être sujet à des changements. Nous essayons de nous rapprocher au maximum du plan initial, mais parfois des modifications sont nécessaires afin d’améliorer l’expérience utilisateur
