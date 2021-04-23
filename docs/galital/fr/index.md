@@ -74,47 +74,47 @@ par les membres du conseil et validée par la communauté.
 
 ## 3. Placement et sécuritée de la chaîne (Staking)
 
-N’importe quel détenteur de $TAL peux participer au staking afin de sécuriser la blockchain. En contrepartie de cette contribution, les stakeur reçoivent des récompenses en $TAL. Il existe 2 rôles distincts : Validateur et Nominateur .
+N’importe quel détenteur de $TAL peux participer au staking afin de sécuriser la blockchain. En contrepartie de cette contribution, les stakeur reçoivent des récompenses en $TAL. Il existe 2 rôles distincts : collateur et Nominateur .
  
-###   3.1	Validateur
+###   3.1	Collateur
 
 
-Les validateurs sécurisent la chaîne relais en bloquant des $TAL permettant de valider les preuves des collators et en participant au consensus avec les autres validateurs.
+Les collateurs sécurisent la chaîne relais en bloquant des $TAL permettant de valider les preuves des collators et en participant au consensus avec les autres collateurs.
 
 
 Ceux-ci joueront un rôle crucial dans l’ajout de nouveaux blocs a la chaine relais et par extension, à toutes les chaînes secondaires. Cela permettant ainsi aux parties d’effectuer des transactions interchaine via la chaîne relais. 
 
-Les validateur remplissent 2 fonctions: 
+Les Collateurs remplissent 2 fonctions: 
 
 
 *   Ils vérifient les informations contenues dans un ensemble assigné de blocs provenant de chaînes secondaires afin de déterminer leur validité (telles que l’identité des parties de la transaction et l'objet du contrat).
-*   Ils participent aux mécanismes de consensus afin de produire les blocs de la chaîne relais en se basant sur les déclarations de validité des autres validateurs. 
+*   Ils participent aux mécanismes de consensus afin de produire les blocs de la chaîne relais en se basant sur les déclarations de validité des autres collateurs. 
 
-Dans le cas de non-conformité aux algorithmes de consensus, le validateur est sanctionné via la suppression d’une partie ou de la totalité des $TAL bloqué sur celui-ci. Ce mécanisme permet ainsi de décourager les acteurs belliqueux. 
+Dans le cas de non-conformité aux algorithmes de consensus, le collateur est sanctionné via la suppression d’une partie ou de la totalité des $TAL bloqué sur celui-ci. Ce mécanisme permet ainsi de décourager les acteurs belliqueux. 
 A contrario, le respect et les bonnes performances sont récompensés par la blockchain.
 
 
-Il y a actuellement 100 places de disponible pour les validateurs. Afin d'être élus par le réseau et ainsi créer de nouveau blocs, les validateurs doivent être dans les 100 premiers en termes de $TAL bloqué (validateur + nominations). 
-Si un validateur n’est pas élu par le réseau, il ne procédera à aucun travail et ne recevra aucune récompense. 
+Il y a actuellement 100 places de disponible pour les collateurs. Afin d'être élus par le réseau et ainsi créer de nouveau blocs, les collateurs doivent être dans les 100 premiers en termes de $TAL bloqué (collateur + nominations). 
+Si un collateur n’est pas élu par le réseau, il ne procédera à aucun travail et ne recevra aucune récompense. 
 
 
 
-En contrepartie de leur contribution, les validateurs reçoivent les récompenses du bloc (nouveau $TAL créé, basé sur le système d’inflation fourni par le réseau) ainsi que 20% des frais de transaction (le reste allant à la trésorerie). 
-Ces récompenses sont  réparties entre le validateur et ses nominateurs en fonction de leurs parts respectives (moins la commission fixé par le validateur afin de couvrir les frais de maintenance) 
+En contrepartie de leur contribution, les collateurs reçoivent les récompenses du bloc (nouveau $TAL créé, basé sur le système d’inflation fourni par le réseau) ainsi que 20% des frais de transaction (le reste allant à la trésorerie). 
+Ces récompenses sont  réparties entre le collateur et ses nominateurs en fonction de leurs parts respectives (moins la commission fixé par le collateur afin de couvrir les frais de maintenance) 
 
 
 
 ### 3.2 Nominateur
 
 
-Les nominateurs sont responsables de la désignation de leur participation auprès des validateurs. En bloquant leurs $TAL sur des validateurs, ils permettent à ceux-ci d'être choisi par le réseau afin de créer des nouveaux blocs et 
+Les nominateurs sont responsables de la désignation de leur participation auprès des collateurs. En bloquant leurs $TAL sur des collateurs, ils permettent à ceux-ci d'être choisi par le réseau afin de créer des nouveaux blocs et 
 partagent ainsi les récompenses et les pénalités associées. 
 
 
 
-Alors que les validateurs sont des participants actifs du réseau qui prennent part aux mécanismes de production et de finalité des blocs, les nominateurs jouent un rôle plus passif avec une approche de délégation. 
-Il n’est donc pas nécessaire d’avoir des connaissances techniques ou de posséder du matériel spécifique. Cependant, un bon nominateur fait preuve de sagesse à l'égard des validateurs qu’il choisit en faisant attention à son propre 
-pourcentage de récompense ainsi qu’au risque d'être sanctionné si le validateur agit de manière belliqueuse. Les nominateurs sont récompensé en fonction du nombre de part qu’ils détiennent sur le validateur (moins les frais de commission) 
+Alors que les collateurs sont des participants actifs du réseau qui prennent part aux mécanismes de production et de finalité des blocs, les nominateurs jouent un rôle plus passif avec une approche de délégation. 
+Il n’est donc pas nécessaire d’avoir des connaissances techniques ou de posséder du matériel spécifique. Cependant, un bon nominateur fait preuve de sagesse à l'égard des collateurs qu’il choisit en faisant attention à son propre 
+pourcentage de récompense ainsi qu’au risque d'être sanctionné si le collateur agit de manière belliqueuse. Les nominateurs sont récompensé en fonction du nombre de part qu’ils détiennent sur le collateur (moins les frais de commission) 
 
 
 ## 4. La Factory
