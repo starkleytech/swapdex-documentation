@@ -1,5 +1,7 @@
 site_name: Galital documentation
 copyright: Copyright &copy; 2021 Galital
+repo_url: https://github.com/starkleytech/galital-docs
+
 markdown_extensions:
   - toc:
       toc_depth: 3
@@ -17,16 +19,26 @@ google_analytics:
   - UA-190563951-2
   - auto
   
-extra:
-  alternate:
+plugins:
+  - search
+  - i18n:
+      languages:
+        fr: "Français"
+        en: "English"
+      default_language: 'en'
 
-    # Switch to English
+extra:
+  # Default mkdocs-material alternate links for untranslated pages
+  # https://squidfunk.github.io/mkdocs-material/setup/changing-the-language/#site-language-selector
+  alternate:
     - name: English
-      link: galital/en/
+      link: ""
       lang: en
 
-    # Switch to French
     - name: Français
-      link: galital/fr/
+      link: index.fr/
       lang: fr
-  
+
+
+
+ 
