@@ -176,7 +176,7 @@ afin de les faire travailler eux aussi.
 
 ## 9. Fractional NFT System
 
-> Galital intends to implement fractional NFT in order to push the NFT beyond the limit and unlock a bunch of new possibilities.
+> Galital a l'intention de mettre en œuvre un système de NFT fractionné afin de pousser les NFTS au-delà de leurs limites et de débloquer de nombreuses nouvelles possibilités.
 
 
 ### Propriété fractionnée (Sharding)
