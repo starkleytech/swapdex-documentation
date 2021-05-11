@@ -71,12 +71,17 @@ Afin de supporter les différentes évolutions de la blockchain, la trésorerie 
 Elle permet essentiellement à la communauté de pouvoir mettre en place des missions rémunérées afin de développer de nouveaux produits, de faire du marketing, d’ajouter de nouveau bridge ou tout autre proposition jugée pertinente 
 par les membres du conseil et validée par la communauté.
 
+## 3. Allocation initiale des tokens
 
-## 3. Placement et sécuritée de la chaîne (Staking)
+![drawing](../../assets/Tokens1.png)
+
+![drawing](../../assets/Tokens2.png)
+
+## 4. Placement et sécuritée de la chaîne (Staking)
 
 N’importe quel détenteur de $TAL peux participer au staking afin de sécuriser la blockchain. En contrepartie de cette contribution, les stakeur reçoivent des récompenses en $TAL. Il existe 2 rôles distincts : validateur et Nominateur .
  
-###   3.1	Collateur
+###   4.1	Collateur
 
 
 Les validateurs sécurisent la chaîne relais en bloquant des $TAL permettant de valider les preuves des collators et en participant au consensus avec les autres validateurs.
@@ -104,7 +109,7 @@ Ces récompenses sont  réparties entre le validateur et ses nominateurs en fonc
 
 
 
-### 3.2 Nominateur
+### 4.2 Nominateur
 
 
 Les nominateurs sont responsables de la désignation de leur participation auprès des validateurs. En bloquant leurs $TAL sur des validateurs, ils permettent à ceux-ci d'être choisi par le réseau afin de créer des nouveaux blocs et 
@@ -117,7 +122,7 @@ Il n’est donc pas nécessaire d’avoir des connaissances techniques ou de pos
 pourcentage de récompense ainsi qu’au risque d'être sanctionné si le validateur agit de manière belliqueuse. Les nominateurs sont récompensé en fonction du nombre de part qu’ils détiennent sur le validateur (moins les frais de commission) 
 
 
-## 4. La Factory
+## 5. La Factory
 
 La factory est un composant essentiel de l'écosystème Galital, il permet entre autres de créer et déployer de manière simple et rapide ses propres NFTs. Grâce à un design d'interface ergonomique, créer des NFTs devient un jeu d’enfant 
 et à la portée de tous. Que vous soyez artiste, créateur de contenu, développeur de JV ou passionnée, la factory est faite pour vous simplifier la vie et vous faire gagner un temps précieux, vous permettant de créer à l'infinie, 
@@ -131,7 +136,7 @@ d’un revenu supplémentaire leur incitant à partager leurs créations.
 
 
 
-## 5. Le Hub (Les bridges entre chaînes + UI)
+## 6. Le Hub (Les bridges entre chaînes + UI)
 
 Le Hub est l’espace dédié pour les bridges cross-chaîne. C’est ici que les utilisateurs vont pouvoir transférer leur NFTs entre les différentes chaînes supportées par Galital (la liste évoluera en fonction des choix de la communauté).
 Dans un premier temps, les transferts depuis et vers Ethereum, BSC, Avalanche, Polkadot, Matic et Flare seront disponibles. Permettant ainsi au utilisateur de pouvoir transférer librement leur NFT pour pouvoir les utiliser directement 
@@ -139,7 +144,7 @@ dans l'écosystème Galital et notamment le market. Le transfert et le flow s'ef
 des NFTs ou de token, l’utilisateur signe ensuite la transaction est procédée par le réseau d’oracles ( Galital utilisera la technologie de ChainSafe ), et transfert les assets sur la chaîne désirée.
 
 
-## 6. Le Market
+## 7. Le Market
 
 Le market est le point central de Galital, c’est ici que les utilisateurs pourront vendre ou acheter des NFTs. La force du market repose sur sa simplicité d’utilisation et sa diversité, il sera possible au vendeur de choisir la 
 crypto qu’il souhaite recevoir en paiement et l’acheteur pourra payer dans la crypto de son choix, grâce à un système de DEX intégrer, les achats seront fluides, fini le temps ou il vous fallait convertir vos ETH en DAI car le NFT 
@@ -162,14 +167,14 @@ Les utilisateurs ont également la possibilité d’effectuer une vente privée 
 
 
 
-## 7. Le Vault
+## 8. Le Vault
 
 Le vault est l’endroit idéal pour stacker ses NFTs afin de farmer des nouveaux tokens. Que ce soit pour gagner des monnaies en jeu ou d’autres crypto, le vault vous permet de bloquer vos NFTs pendant une certaine période 
 afin de les faire travailler eux aussi. 
 
 
 
-## 8. Fractional NFT System
+## 9. Fractional NFT System
 
 > Galital intends to implement fractional NFT in order to push the NFT beyond the limit and unlock a bunch of new possibilities.
 
@@ -198,26 +203,26 @@ permettant ainsi de donner plus rareté à un seul NFT.
 	
 
 
-## 9. La forge
+## 10. La forge
 
 La forge est l'endroit idéal pour casser ses NFTs en éclats (ou "Shards"). Il est possible de choisir la rareté (le nombre de shards produit : 10, 100, 1000, etc..). Ensuite, les "Shards" peuvent être distribué ou vendu via le Market comme 
 un token. Cela donnera par exemple la possibilité aux créateurs de jeux vidéo d'améliorer la rareté de leur NFT tout en permettant à un plus grand nombre de personnes d'y acceder.
 
 Lorsque vous avez collecté tous les "Shards" d'un NFT, vous pouvez aller sur la forge et les fusionner afin de reformer le NFT original.
 
-## 10. Prêter / Emprunter
+## 11. Prêter / Emprunter
 
 En plus de simplifier considérablement l'achat et la vente de NFTS, le marché permettra également aux utilisateurs de louer ou prêter leurs NFT. Vous souhaitez obtenir un objet de valeur dans un jeu pour un certain temps ? 
 Vous possédez des terres que vous aimeriez mettre à disposition ? Un ami a besoin d'un NFT en votre possession temporairement ? Le marché vous permettra d'effectuer toutes ces actions et bien plus encore, de manière simple et sécurisée.
 Plus besoin d'envoyer vorte NFT pour le prêter. Un nouveau champ de possiblités s'offre a vous avec Galital.
 
-## 11. Le Home
+## 12. Le Home
 
 Le home fait office de dashboard pour gérer vos NFTs. C’est ici que vous aurez la possibilité de voir vos NFTs, gérer vos assets c’est votre panneau de contrôle principal. 
 De cet emplacement vous pourrez gérer toutes les applications, créer des tokens, acheter / vendre sur le marketplace.
 
 
-## 12. Contracts intéligents
+## 13. Contracts intéligents
 
 Étant donné que Substrate prend en charge les contrats intelligents Wasm, cela signifie que tout langage pouvant compiler vers Wasm peut être utilisé pour écrire ces contrats. ink! est la réponse de Parity pour rédiger des contrats 
 intelligents en utilisant le langage de programmation Rust.
@@ -229,7 +234,7 @@ Les principaux objectifs de INK! sont la convivialité, la concision et l'effica
 
 
 
-### 12.1 Composants du contrat
+### 13.1 Composants du contrat
 
 
 ink! devrait se sentir familier aux développeurs qui ont programmé en utilisant d'autres langages de contrat intelligents modernes. Le squelette d'un contrat à tous les mêmes composants auquel vous pourriez vous attendre:
@@ -247,7 +252,7 @@ Dans ink !, la mutabilité et la visibilité sont explicitement définies par fo
 De plus, vous avez accès à des variables d'environnement couramment utilisées comme l'appelant, et plus encore!
 
 
-### 12.2 Design
+### 13.2 Design
 
 
 Les principaux objectifs de ink! sont l'exactitude, la concision et l'efficacité.
@@ -257,7 +262,7 @@ inking! est conçu pour être aussi proche que possible du langage de programmat
 Parce que ink! suit les normes Rust, des outils comme rustfmt et rust-analyzer fonctionnent déjà nativement.
 
 
-### 12.3 Sécurité d’overflow
+### 13.3 Sécurité d’overflow
 
 
 Être écrit en Rust, INK! peut fournir une sécurité de dépassement / sous-dépassement lors de la compilation. À l'aide d'une configuration de compilateur Rust, vous pouvez spécifier si vous souhaitez prendre en charge 
@@ -270,14 +275,14 @@ Cette fonctionnalité peut changer ou être réitérée à l'avenir.
 
 
 
-### 12.4 Environnement de test
+### 13.4 Environnement de test
 
 
 INK! fournit un environnement de test intégré qui peut être utilisé pour effectuer des tests unitaires hors chaîne avec le framework Rust. Cela permet de garantir simplement et facilement que votre code de contrat fonctionne comme prévu, 
 sans avoir besoin de plates-formes de test tierces.
 
 
-### 12.4 ink! vs Solidity 
+### 13.4 ink! vs Solidity 
 
 
 Rust est un langage de contrat intelligent idéal. Il est de type sécurisé, sans danger pour la mémoire et exempt de comportements indéfinis. Il génère de petits fichiers binaires car il n'inclut pas de ballonnement supplémentaire, 
