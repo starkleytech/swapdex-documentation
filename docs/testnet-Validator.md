@@ -61,10 +61,9 @@ sudo systemctl enable chrony
 Allow the process in firewall
 
 ```
-sudo apt install firewalld
-```
-```
-sudo firewall-cmd --permanent --add-service=ntp && sudo firewall-cmd --add-port=30333/tcp --permanent && sudo firewall-cmd --reload
+sudo ufw allow 22
+sudo ufw allow 30333
+sudo ufw enable
 ```
 
 get Galital package from github
@@ -88,7 +87,7 @@ After=network-online.target
 
 [Service]
 
-ExecStart=/usr/bin/galital --port "30333" --name "A Node Name" --validator  --telemetry-url 'wss://substrate-telemetry.starkleytech.com/submit/ 0' --chain galital   
+ExecStart=/usr/bin/galital --port "30333" --name "A Node Name" --validator --chain galital   
 User=root
 Restart=always
 ExecStartPre=/bin/sleep 5
