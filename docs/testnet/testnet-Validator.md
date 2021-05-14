@@ -74,7 +74,7 @@ sudo apt install -y fail2ban && sudo systemctl enable fail2ban && sudo service f
 get Galital package from github
 
 ```
-wget https://github.com/starkleytech/galital/releases/download/2.0.0/galital && sudo chmod +x ./galital && sudo mv ./galital /usr/bin/galital
+wget https://github.com/starkleytech/galital/releases/download/2.0.1/galital && sudo chmod +x ./galital && sudo mv ./galital /usr/bin/galital
 ```
 
 ## Make the service permanent
