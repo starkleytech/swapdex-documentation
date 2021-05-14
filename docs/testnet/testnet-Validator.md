@@ -106,7 +106,7 @@ WantedBy=multi-user.target
 
 then start the service
 ```
-sudo systemctl enable tal && sudo service tal start 
+sudo systemctl enable galital && sudo service galital start 
 ```
 
 Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/Galital](https://telemetry.polkadot.io/#list/Galital)
