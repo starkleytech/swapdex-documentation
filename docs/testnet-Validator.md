@@ -77,7 +77,7 @@ wget https://github.com/starkleytech/galital/releases/download/2.0.0/galital && 
 create systemd file in /etc/systemd/system/tal.service
 
 ```
-sudo nano /etc/systemd/system/tal.service
+sudo nano /etc/systemd/system/galital.service
 ```
 
 ```
