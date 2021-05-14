@@ -129,7 +129,7 @@ Save your mnemonic seed
 then name your account and add a password
 ![Controller](assets/controllerAccount3.png) 
 
-Then send some pirl (from your stash account) for covering network fees
+Then send some $RTAL (from your stash account) for covering network fees
 
 You can proceed to the next steps
 
@@ -143,7 +143,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 
 ### Submitting the setKeys Transaction:
 
-Go to the [testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Ftestnet-rpc.pirl.network#/staking/actions) you can now create a validator, use the key generated above to paste in the form.
+Go to the [testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fgalital-rpc-testnet.starkleytech.com#/staking/actions) you can now create a validator, use the key generated above to paste in the form.
 ![Validator](assets/valitador1.png)
 
 Select your stash account, controller account and so one
