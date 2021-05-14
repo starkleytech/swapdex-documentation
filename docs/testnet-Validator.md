@@ -66,6 +66,11 @@ sudo ufw allow 30333
 sudo ufw enable
 ```
 
+Setup fail2ban
+```
+sudo apt install -y fail2ban && sudo systemctl enable fail2ban && sudo service fail2ban start
+```
+
 get Galital package from github
 
 ```
