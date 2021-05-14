@@ -1,4 +1,4 @@
-# Setup Masternode
+# Setup Validator
 
 ## Requirements
 
