@@ -48,55 +48,60 @@ sudo ntpq -p
 
 <br>
 
-Install and configure time
+### Install and enable Chrony
+Chrony is time synchronization service. It will keep time on server in sync, which is crucial for validator to operate without interruption.
 ```
 sudo apt install chrony
-```
-
-Enable it
-```
 sudo systemctl enable chrony
 ```
 
-Allow the process in firewall
-
+### Firewall configuration
+Configure firewall ports to allow SSH and Validator to communicate.
 ```
 sudo ufw allow 22
 sudo ufw allow 30333
 sudo ufw enable
 ```
 
-Setup fail2ban
+### Setup fail2ban
+It provides basic-level protection against distributed brute-force attacks.
 ```
 sudo apt install -y fail2ban && sudo systemctl enable fail2ban && sudo service fail2ban start
 ```
 
-get Galital package from github
-
+### Install Galital Validator binaries
 ```
 wget https://github.com/starkleytech/galital/releases/download/2.0.1/galital && sudo chmod +x ./galital && sudo mv ./galital /usr/bin/galital
 ```
 
-## Make the service permanent
-
-create systemd file in /etc/systemd/system/tal.service
-
+### Create user account to run Validator
+It is recommended to run validator as non-root user.
+For that crate dedicated user which will be used to run validator.
 ```
-sudo nano /etc/systemd/system/galital.service
+sudo adduser galital
+```
+when adding user you will be asked to provide password and some additional details for the account.
+Only password is mandatory, other parameters can be left blank.
+
+### Create Galital Validator service
+Create service file file in /lib/systemd/system/tal.service
+```
+sudo nano /lib/systemd/system/galital.service
 ```
 
+Content of galital.service file ***(make sure to change "A Node Name" and replace it with your moniker)***:
 ```
 [Unit]
 Description=Galital Validator
 After=network-online.target
 
 [Service]
-
 ExecStart=/usr/bin/galital --port "30333" --name "A Node Name" --validator --chain galital   
-User=root
+User=galital
 Restart=always
 ExecStartPre=/bin/sleep 5
 RestartSec=30s
+LimitNOFILE=8192
 
 [Install]
 WantedBy=multi-user.target
@@ -107,6 +112,17 @@ WantedBy=multi-user.target
 then start the service
 ```
 sudo systemctl enable galital && sudo service galital start 
+```
+
+### Check if validator is started
+To ensure that Galital Validator process works:
+```
+ps aux | grep galital
+```
+
+You should see similar output:
+```
+galital   8108  9.9 21.0 1117976 419772 ?      Ssl  May17 601:17 /usr/bin/galital --port 30333 --name "A Node Name" --validator --chain galital
 ```
 
 Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/Galital](https://telemetry.polkadot.io/#list/Galital)
