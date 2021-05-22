@@ -1,5 +1,7 @@
 # Setup Validator
 
+## Part 1 - Setup server components
+
 ## Requirements
 
 The most common way for a beginner to run a validator is on a cloud server running Linux. You may choose whatever [VPS providers](#list-of-vps-providers) that your prefer, and whatever operating system you are comfortable with.
@@ -56,7 +58,7 @@ sudo systemctl enable chrony
 ```
 
 ### Firewall configuration
-Configure firewall ports to allow SSH and Validator to communicate.
+Configure firewall ports to allow SSH and Validator service to communicate.
 ```
 sudo ufw allow 22
 sudo ufw allow 30333
@@ -76,7 +78,7 @@ wget https://github.com/starkleytech/galital/releases/download/2.0.1/galital && 
 
 ### Create user account to run Validator
 It is recommended to run validator as non-root user.
-For that crate dedicated user which will be used to run validator.
+For that create dedicated user account which will be used to run validator.
 ```
 sudo adduser galital
 ```
@@ -129,8 +131,10 @@ Check if your node is appearing in the telemetry UI : [https://telemetry.polkado
 
 > Do not forget to change the name parameter (--name "A Node Name")
 
+***Video demonstrating all above steps: [Galital Validator in 6 minutes](https://www.youtube.com/watch?v=K7ZNKnu0sIs)***
 
-## Step 2 Assign the node to an account
+
+## Part 2 - Assign the node to an account
 
 You can get some RTAL (Testnet token) with the discord bot
 
@@ -175,6 +179,8 @@ Add you keys form the past command.
 
 You should now see your validator in the waiting tab
 ![Validator](assets/valitador4.png)
+
+***Video demonstrating all above steps: [Galital Validator Accounts and Bonding](https://www.youtube.com/watch?v=JLZsAeqSD2g)***
 
 
 Voila, you are all set
