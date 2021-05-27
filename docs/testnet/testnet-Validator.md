@@ -133,7 +133,7 @@ Check if your node is appearing in the telemetry UI : [https://telemetry.polkado
 
 ***Video demonstrating all above steps: ***
 
-<iframe width="560" height="315" src="https://www.youtube.com/embed/K7ZNKnu0sIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="600" src="https://www.youtube.com/embed/K7ZNKnu0sIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Part 2 - Assign the node to an account
 
@@ -182,7 +182,7 @@ You should now see your validator in the waiting tab
 ![Validator](assets/valitador4.png)
 
 ***Video demonstrating all above steps:***
-<iframe width="560" height="315" src="https://www.youtube.com/embed/JLZsAeqSD2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="600" src="https://www.youtube.com/embed/JLZsAeqSD2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 Voila, you are all set
 
