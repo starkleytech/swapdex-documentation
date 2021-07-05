@@ -189,7 +189,7 @@ You should now see your validator in the waiting tab
 
 Short video guide demonstrating how to assign name to validator.
 
-<iframe width="800" height="600" src="https://www.youtube.com/watch?v=8ES8-eg70eI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+<iframe width="800" height="600" src="https://www.youtube.com/embed/8ES8-eg70eI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 Voila, you are all set
