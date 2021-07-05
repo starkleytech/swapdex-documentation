@@ -12,7 +12,7 @@ In order to get the new node ID being the same as the old one you need to move t
 ## The commands:
 **This assumes you followed the documentation deployment and you use root user, replace it if the user is different. This will replace all the data on the new server!**
 
-### 1) Stop galital service on the new server
+### 1) Stop galital service on the new server after the node has completed the full synchronisation
 
 ``` service galital stop ```
 
@@ -27,4 +27,4 @@ Relaunch galital service
 
 
 
-Voila, you are all set.
+Voila, you are all set, just wait for the chain to sync and catch the latest blocks.
