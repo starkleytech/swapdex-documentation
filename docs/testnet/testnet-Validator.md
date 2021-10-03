@@ -6,7 +6,7 @@
 
 The most common way for a beginner to run a validator is on a cloud server running Linux. You may choose whatever [VPS providers](#list-of-vps-providers) that your prefer, and whatever operating system you are comfortable with.
 
-The transactions weights in Galital Testnet were benchmarked on standard hardware. It is recommended that validators run at least the standard hardware in order to ensure they are able to process all blocks in time. The following are not minimum requirements but if you decide to run with less than this beware that you might have performance issue.
+The transactions weights in swapdex Testnet were benchmarked on standard hardware. It is recommended that validators run at least the standard hardware in order to ensure they are able to process all blocks in time. The following are not minimum requirements but if you decide to run with less than this beware that you might have performance issue.
 
 ### Minimum Hardware :
 
@@ -46,7 +46,7 @@ sudo ntpq -p
 >
 
 
-## Installing the Galital Testnet Binary
+## Installing the swapdex Testnet Binary
 
 <br>
 
@@ -71,35 +71,35 @@ It provides basic-level protection against distributed brute-force attacks.
 sudo apt install -y fail2ban && sudo systemctl enable fail2ban && sudo service fail2ban start
 ```
 
-### Install Galital Validator binaries
+### Install swapdex Validator binaries
 ```
-wget https://github.com/starkleytech/galital/releases/download/2.0.1/galital && sudo chmod +x ./galital && sudo mv ./galital /usr/bin/galital
+wget https://github.com/starkleytech/swapdex/releases/download/2.0.1/swapdex && sudo chmod +x ./swapdex && sudo mv ./swapdex /usr/bin/swapdex
 ```
 
 ### Create user account to run Validator
 It is recommended to run validator as non-root user.
 For that create dedicated user account which will be used to run validator.
 ```
-sudo adduser galital
+sudo adduser swapdex
 ```
 when adding user you will be asked to provide password and some additional details for the account.
 Only password is mandatory, other parameters can be left blank.
 
-### Create Galital Validator service
+### Create swapdex Validator service
 Create service file file in /lib/systemd/system/tal.service
 ```
-sudo nano /lib/systemd/system/galital.service
+sudo nano /lib/systemd/system/swapdex.service
 ```
 
-Content of galital.service file ***(make sure to change "A Node Name" and replace it with your moniker)***:
+Content of swapdex.service file ***(make sure to change "A Node Name" and replace it with your moniker)***:
 ```
 [Unit]
-Description=Galital Validator
+Description=swapdex Validator
 After=network-online.target
 
 [Service]
-ExecStart=/usr/bin/galital --port "30333" --name "A Node Name" --validator --chain galital   
-User=galital
+ExecStart=/usr/bin/swapdex --port "30333" --name "A Node Name" --validator --chain swapdex   
+User=swapdex
 Restart=always
 ExecStartPre=/bin/sleep 5
 RestartSec=30s
@@ -113,27 +113,24 @@ WantedBy=multi-user.target
 
 then start the service
 ```
-sudo systemctl enable galital && sudo service galital start 
+sudo systemctl enable swapdex && sudo service swapdex start 
 ```
 
 ### Check if validator is started
-To ensure that Galital Validator process works:
+To ensure that swapdex Validator process works:
 ```
-ps aux | grep galital
+ps aux | grep swapdex
 ```
 
 You should see similar output:
 ```
-galital   8108  9.9 21.0 1117976 419772 ?      Ssl  May17 601:17 /usr/bin/galital --port 30333 --name "A Node Name" --validator --chain galital
+swapdex   8108  9.9 21.0 1117976 419772 ?      Ssl  May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain swapdex
 ```
 
-Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/Galital](https://telemetry.polkadot.io/#list/Galital)
+Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/swapdex](https://telemetry.polkadot.io/#list/swapdex)
 
 > Do not forget to change the name parameter (--name "A Node Name")
 
-***Video demonstrating all above steps: ***
-
-<iframe width="800" height="600" src="https://www.youtube.com/embed/K7ZNKnu0sIs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Part 2 - Assign the node to an account
 
@@ -169,7 +166,7 @@ curl -H "Content-Type: application/json" -d '{"id":1, "jsonrpc":"2.0", "method":
 
 ### Submitting the setKeys Transaction:
 
-Go to the [testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fgalital-rpc-testnet.starkleytech.com#/staking/actions) you can now create a validator, use the key generated above to paste in the form.
+Go to the [testnet](https://polkadot.js.org/apps/?rpc=wss%3A%2F%2Fswapdex-rpc-testnet.starkleytech.com#/staking/actions) you can now create a validator, use the key generated above to paste in the form.
 ![Validator](assets/valitador1.png)
 
 Select your stash account, controller account and so one
@@ -181,15 +178,7 @@ Add you keys form the past command.
 You should now see your validator in the waiting tab
 ![Validator](assets/valitador4.png)
 
-***Video demonstrating all above steps:***
-<iframe width="800" height="600" src="https://www.youtube.com/embed/JLZsAeqSD2g" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
-
-## Part 3 - Set on-chain name of the validator
-
-Short video guide demonstrating how to assign name to validator.
-
-<iframe width="800" height="600" src="https://www.youtube.com/embed/8ES8-eg70eI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 
 Voila, you are all set
