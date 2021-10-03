@@ -1,5 +1,5 @@
 
-# Galital: The Digital Galaxy
+# SwapDex
 
 > **⚠ WARNING:  Work in progress content can change and it's not definitive.** 
 

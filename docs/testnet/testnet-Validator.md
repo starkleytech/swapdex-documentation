@@ -1,4 +1,4 @@
-# Setup Validator
+# **Setup Validator**
 
 ## Part 1 - Setup server components
 

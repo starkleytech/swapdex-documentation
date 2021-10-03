@@ -1,19 +1,27 @@
-site_name: Galital documentation
-copyright: Copyright &copy; 2021 Galital
+site_name: SwapDex Wiki
+copyright: Copyright &copy; 2021 SwapDex
 repo_url: https://github.com/starkleytech/galital-docs
 
 markdown_extensions:
   - toc:
       toc_depth: 3
 theme:
+  palette:
+    primary: pink
+    scheme: default
+    
   markdown_extensions:
   features:
     - toc.integrate
+    - navigation.instant
+    - navigation.tracking
+    - navigation.tabs
+    - navigation.tabs.sticky
   name: material
   features:
   custom_dir: overrides
-  logo: assets/galital-logo.png
-  favicon: assets/galital-logo.png
+  logo: assets/swapdex-logo-circlewhite.png
+  favicon: assets/swapdex-icon.png
   language: en
 google_analytics:
   - UA-190563951-2
