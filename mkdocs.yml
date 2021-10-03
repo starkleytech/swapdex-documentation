@@ -1,6 +1,6 @@
 site_name: SwapDex Wiki
 copyright: Copyright &copy; 2021 SwapDex
-repo_url: https://github.com/starkleytech/galital-docs
+repo_url: https://github.com/Swapdex-Protocol/swapdex-documentation
 
 markdown_extensions:
   - toc:
@@ -18,7 +18,6 @@ theme:
     - navigation.tabs
     - navigation.tabs.sticky
   name: material
-  features:
   custom_dir: overrides
   logo: assets/swapdex-logo-circlewhite.png
   favicon: assets/swapdex-icon.png
