@@ -1,7 +1,9 @@
 
 # SwapDex
+![Testnet_release](assets/swapdex-testnet-launch.png)
 
-> **⚠ WARNING:  Work in progress content can change and it's not definitive.** 
+!!! Warning
+    Work in progress content can change and it's not definitive. 
 
 ## Disclaimer:
 
@@ -19,6 +21,5 @@
 
 * [https://substrate.dev/docs/en/knowledgebase/smart-contracts/](https://substrate.dev/docs/en/knowledgebase/smart-contracts/)
 * [https://substrate.dev/docs/](https://substrate.dev/docs)
-* [https://docs.galital.com/](htts://docs.galital.com)
 
    

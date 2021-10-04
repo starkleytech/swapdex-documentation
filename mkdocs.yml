@@ -9,33 +9,19 @@ markdown_extensions:
   - toc:
       toc_depth: 3
 theme:
-  palette:
-    primary: pink
-    scheme: default
     
   markdown_extensions:
   features:
-    - toc.integrate
     - navigation.instant
     - navigation.tracking
-    - navigation.tabs
-    - navigation.tabs.sticky
   name: material
   custom_dir: overrides
   logo: assets/swapdex-logo-circlewhite.png
   favicon: assets/swapdex-icon.png
   language: en
-google_analytics:
-  - UA-190563951-2
-  - auto
   
 plugins:
   - search
-  - i18n:
-      languages:
-        fr: "Français"
-        en: "English"
-      default_language: 'en'
 
 extra:
   # Default mkdocs-material alternate links for untranslated pages
@@ -44,11 +30,7 @@ extra:
     - name: English
       link: ""
       lang: en
-
-    - name: Français
-      link: index.fr/
-      lang: fr
-
-
+extra_css:
+  - stylesheets/extra.css
 
  
