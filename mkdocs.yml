@@ -3,6 +3,9 @@ copyright: Copyright &copy; 2021 SwapDex
 repo_url: https://github.com/Swapdex-Protocol/swapdex-documentation
 
 markdown_extensions:
+  - admonition
+  - pymdownx.details
+  - pymdownx.superfences
   - toc:
       toc_depth: 3
 theme:
