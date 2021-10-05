@@ -1,5 +1,7 @@
 # Become a Validator
 
+![Become a Validator](assets/swapdex-bull.png)
+
 The following guide will teach you how to set up a Smart Dex Chain Validator. The process of becoming a validator requires two steps. The first step is to set up a network node. The second step is to assign your node to your account and apply for validator candidacy.
 
 Network validators are the foundation of a decentralized proof-of-stake network because they are responsible for concluding on a consensus by creating new and validating already produced blocks. That said, network validators are the prime target for adversaries that aim to sabotage the network. The Smart Dex Chain has many layers to protect the network from attacks. The first layer is the security of each validator itself. Another layer is the slashing mechanism that detects validator nodes that display abnormal or dangerous behavior and punishes them with slashes. A slash will, in all cases, lead to the loss of funds. 
@@ -37,40 +39,45 @@ We benchmarked the transactions weights on the Smart Dex Chain Testnet on standa
 sudo apt-get update
 ```
 
-### Validator
+### Network Time Protocol (NTP) Client
 
-Install & Configure Network Time Protocol (NTP) Client
-NTP is a networking protocol designed to synchronize the clocks of computers over a network. NTP allows you to synchronize the clocks of all the systems within the network. Currently it is required that validators' local clocks stay reasonably in sync, so you should be running NTP or a similar service. You can check whether you have the NTP client by running:
+We currently require that the clocks of all validators on the network stay reasonably in sync. The NTP client is a piece of software that allows you to synchronize your server's clock with the clocks of the remaining servers connected to the blockchain. 
 
-If you are using Ubuntu 18.04 / 19.04 / 20.04, NTP Client should be installed by default.
-```
-timedatectl
-```
-If NTP is installed and running, you should see System clock synchronized: yes (or a similar message). If you do not see it, you can install it by executing:
+!!! info
+    If you are using Ubuntu 18.04 / 19.04 / 20.04, NTP Client should be installed by default. You can check if your server is already running NTP by executing the following command:   
+    ```
+    timedatectl
+    ```
+    If NTP is installed and running, you should see System clock synchronized: yes (or a similar message).
+
+Otherwise install the NTP client by running the following command:
 ```
 sudo apt-get install ntp
 ```
-ntpd will be started automatically after install. You can query ntpd for status information to verify that everything is working:
+NTP will be started automatically after install. You can query your NTP client for status information to verify that everything is working:
 ```
 sudo ntpq -p
 ```
+!!! warning
+    Skipping this can result in the validator node missing block authorship opportunities. If the clock is out of sync (even by a small amount), the blocks the validator produces may not get accepted by the network. This will result in ImOnline heartbeats making it on chain, but zero allocated blocks making it on chain. 
 
->WARNING: Skipping this can result in the validator node missing block authorship opportunities. If the clock is out of sync (even by a small amount), the blocks the validator produces may not get accepted by the network. This will result in ImOnline heartbeats making it on chain, but zero allocated blocks making it on chain. 
->
 
-
-## Installing the swapdex Testnet Binary
-
-<br>
+## Installing the Smart Dex Chain Testnet Binary
 
 ### Install and enable Chrony
-Chrony is time synchronization service. It will keep time on server in sync, which is crucial for validator to operate without interruption.
+We learned in the previous step that the new versions of Ubunutu ship the NTP client by default. However, Chrony is another time sync. tool that delivers better and more stable performance. Therefore, we recommend installing and enabling Chrony on top of the NTP client to ensure synchronized clocks and uninterrupted validator operations.
 ```
 sudo apt install chrony
 sudo systemctl enable chrony
 ```
 
-### Firewall configuration
+### Fundamental Security Measures
+Security is of utmost importance if you consider operating a validator on a live network successfully. We will show you how to create a fundamental layer of protection by installing a firewall and a fail2ban service.
+
+**Configure a Firewall**
+
+The default firewall configuration tool for Ubuntu is [ufw](https://help.ubuntu.com/community/UFW). UFW stands for uncomplicated firewall and helps ease iptables firewall configuration, and provides a user-friendly way to create an IPv4 or IPv6 host-based firewall.
+
 Configure firewall ports to allow SSH and Validator service to communicate.
 ```
 sudo ufw allow 22
@@ -78,33 +85,47 @@ sudo ufw allow 30333
 sudo ufw enable
 ```
 
-### Setup fail2ban
+**Setup Fail2Ban**
+
+[Fail2Ban](https://www.fail2ban.org/wiki/index.php/Main_Page) is a tool that scans log files and bans IPs that show malicious signs for instance too many password failures, seeking for exploits, etc.
+Generally Fail2Ban is then used to update firewall rules to reject the IP addresses for a specified amount of time.
 It provides basic-level protection against distributed brute-force attacks.
 ```
 sudo apt install -y fail2ban && sudo systemctl enable fail2ban && sudo service fail2ban start
 ```
-
+!!! success
+    Congratulations! You implemented a fundamental layer of protection.
+ 
 ### Install swapdex Validator binaries
+The following command will fetch / download the SwapDex validator binaries and copy them to a specific folder
 ```
 wget https://github.com/starkleytech/swapdex/releases/download/2.0.1/swapdex && sudo chmod +x ./swapdex && sudo mv ./swapdex /usr/bin/swapdex
 ```
 
-### Create user account to run Validator
-It is recommended to run validator as non-root user.
-For that create dedicated user account which will be used to run validator.
+### Create User Account for Validator Operations
+For security reasons we recommended to run a validator as non-root user.
+For that we create a dedicated user account which will be used to run the validator.
 ```
-sudo adduser swapdex
+sudo adduser swapdex-validator
 ```
-when adding user you will be asked to provide password and some additional details for the account.
-Only password is mandatory, other parameters can be left blank.
+!!! info
+    when adding the new account you will be asked to provide a password and some additional information.
+    Only the password is mandatory, the other parameters can be left blank.
 
-### Create swapdex Validator service
-Create service file file in /lib/systemd/system/tal.service
+### Create the SwapDex Validator Service File
+In the next step, we will use [Nano](https://help.ubuntu.com/community/Nano), a simple terminal-based text editor, to create a file that contains service instructions.
+The following command creates a file named swapdex.service at the following location: /lib/systemd/system/
+
 ```
 sudo nano /lib/systemd/system/swapdex.service
 ```
 
-Content of swapdex.service file ***(make sure to change "A Node Name" and replace it with your moniker)***:
+!!! warning
+    The following code-block contains the content that must be inserted into the Nano text editor!
+    Make sure to **change "A Node Name" and replace it your preferred name**
+
+
+**Content of the swapdex.service file**:
 ```
 [Unit]
 Description=swapdex Validator
@@ -121,8 +142,8 @@ LimitNOFILE=8192
 [Install]
 WantedBy=multi-user.target
 ```
-
-> If you need to change port, you can setup with `--prometheus-port` `--rpc-port` and `--ws-port`
+!!! hint
+    If you want to add a port, you can set it up with e.g. `--prometheus-port` `--rpc-port` and `--ws-port`
 
 then start the service
 ```
@@ -130,31 +151,47 @@ sudo systemctl enable swapdex && sudo service swapdex start
 ```
 
 ### Check if validator is started
-To ensure that swapdex Validator process works:
+To ensure that the SwaDdex Validator process works please execute the following command:
 ```
 ps aux | grep swapdex
 ```
 
-You should see similar output:
+You should see a similar output:
 ```
 swapdex   8108  9.9 21.0 1117976 419772 ?      Ssl  May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain swapdex
 ```
 
 Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/swapdex](https://telemetry.polkadot.io/#list/swapdex)
 
-> Do not forget to change the name parameter (--name "A Node Name")
+!!! info
+    If you want to find your node here you must have changed the name parameter in the previous step (--name "A Node Name")
+
+!!! success
+    Congrats! If you checked and found your node on the telemetry page, you successfully set up your server to become a SwapDex testnet validator!
 
 
 ## Part 2 - Assign the node to an account
 
-You can get some RTAL (Testnet token) with the discord bot
+The second part of this guide will complete the validator setup by connecting your server with your substrate wallet.
+Make sure you have some TSDX (Testnet Coins) in your substrate wallet. In case you need TSDX please visit our discord server and ask one of the admins. 
 
-You need to create an controller account in order to do the next steps. 
+### What are stash and controller accounts?
 
->The stash account serve as you "cold wallet" with all your precious coin
->
->The controller account serve as a manager to your stash account
-><br></br><strong>Always keep in safe place your keystore file or your 12/24 words seed</strong>
+The divison into two wallets or accounts is an additional security feature we implemented to protect you funds in case of fradulent attacks.
+
+!!! hint
+    In short:
+    The **Stash-Account** is where you keep all the funds you want to stake. We recommend to protect it's private key with a hardware wallet like Ledger or Trezor.
+    The **Controller-Account**  is used to control actions related to your staking
+
+The Stash Account will be used to bond/unbond your funds and to choose which address will be the Controller Account.
+The Controller Account will be used to take actions on behalf of the bonded funds. 
+However, the Controller Account can't move the bonded funds out of the Stash Account.
+
+!!! warning
+    **Never disclose your Keystore file or your 12/24 words seed phrase.**
+
+### Create the Controller Account
 
 To create an controller account, add account
 ![Controller](assets/controllerAccount1.png)
@@ -165,7 +202,7 @@ Save your mnemonic seed
 then name your account and add a password
 ![Controller](assets/controllerAccount3.png) 
 
-Then send some $RTAL (from your stash account) for covering network fees
+Then send some TSDX (from your stash account) to cover the network fees
 
 You can proceed to the next steps
 
@@ -193,9 +230,9 @@ You should now see your validator in the waiting tab
 
 
 
-
-Voila, you are all set
+!!! success
+    Alright mate! You are all set :D
 
 <br></br>
 
-<p align=right> Written by Masterdubs & WeHaveCookie </p>
+<p align=right> Written by Masterdubs & Petar </p>
