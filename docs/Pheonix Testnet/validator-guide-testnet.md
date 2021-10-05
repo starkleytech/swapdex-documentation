@@ -132,7 +132,7 @@ Description=swapdex Validator
 After=network-online.target
 
 [Service]
-ExecStart=/usr/bin/swapdex --port "30333" --name "A Node Name" --validator --chain swapdex   
+ExecStart=/usr/bin/swapdex --port "30333" --name "A Node Name" --validator --chain phoenix   
 User=swapdex
 Restart=always
 ExecStartPre=/bin/sleep 5
@@ -158,7 +158,7 @@ ps aux | grep swapdex
 
 You should see a similar output:
 ```
-swapdex   8108  9.9 21.0 1117976 419772 ?      Ssl  May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain swapdex
+swapdex   8108  9.9 21.0 1117976 419772 ?      Ssl  May17 601:17 /usr/bin/swapdex --port 30333 --name "A Node Name" --validator --chain phoenix
 ```
 
 Check if your node is appearing in the telemetry UI : [https://telemetry.polkadot.io/#list/swapdex](https://telemetry.polkadot.io/#list/swapdex)
