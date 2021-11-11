@@ -98,10 +98,11 @@ sudo apt install -y fail2ban && sudo systemctl enable fail2ban && sudo service f
  
 ### Install swapdex Validator binaries
 The following command will fetch / download the SwapDex validator binaries and copy them to a specific folder
+check your ubuntu version and choose the correct file for it. [check your ubuntu version and choose the correct file for it](https://download.starkleytech.com/swapdex)
 ```
-wget https://github.com/starkleytech/swapdex/releases/download/2.0.1/swapdex && sudo chmod +x ./swapdex && sudo mv ./swapdex /usr/bin/swapdex
+wget https://download.starkleytech.com/swapdex/FILE_NAME_FROM_ABOVE -O swapdex && sudo chmod +x ./swapdex && sudo mv ./swapdex /usr/bin/swapdex
 ```
-
+S
 ### Create User Account for Validator Operations
 For security reasons we recommended to run a validator as non-root user.
 For that we create a dedicated user account which will be used to run the validator.
