@@ -189,7 +189,7 @@ The Controller Account will be used to take actions on behalf of the bonded fund
 However, the Controller Account can't move the bonded funds out of the Stash Account.
 
 !!! warning
-    **Never disclose your Keystore file or your 12/24 words seed phrase.**
+    **Never disclose your Keystore file or your 12/24 words seed phrase. The team will never ask it.**
 
 ### Create the Controller Account
 
